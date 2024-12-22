@@ -1,0 +1,74 @@
+
+.Resume-title{
+    position: relative;
+    display: inline-block;
+    /* font-size: 24px; */
+    font-weight: bold;
+    padding-bottom: 8px;
+    
+}
+
+.Resume-title::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    width: 50%;
+    height: 3px;
+    background-color: #00FF99;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+/* Custom Tab Button Styles */
+.custom-tab-button {
+    background-color: transparent;
+    border: 2px solid #00FF99; /* Green border */
+    color: #00FF99; /* Green text color */
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 25px; /* Rounded corners */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+  .custom-tab-button:hover {
+    background-color: #00FF99; /* Green background on hover */
+    color: #100a0a; /* White text on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  .custom-tab-button.active {
+    background-color: #00FF99; /* Green background for active tab */
+    color: #100808; /* White text for active tab */
+    font-weight: bold; /* Bold text for active tab */
+  }
+  
+  /* Optional: Tab button focus styles */
+  .custom-tab-button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.5); /* Green focus ring */
+  }
+  
+  /* Optional: Add space between tab buttons */
+  .d-flex {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (max-width:"600px") {
+    /* Custom Tab Button Styles */
+.custom-tab-button {
+    background-color: transparent;
+    border: 2px solid #00FF99; /* Green border */
+    color: #00FF99; /* Green text color */
+    font-size: 14px;
+    padding: 8px 15px;
+    margin: 0 8px;
+    border-radius: 25px; /* Rounded corners */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  }

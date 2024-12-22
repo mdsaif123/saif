@@ -1,0 +1,95 @@
+.hero-section-con{
+  width: 100vw;
+  /* height: 90vh; */
+}
+.hero-intro {
+  font-size: 3rem; /* Adjust the size as needed */
+  font-weight: bold;
+}
+
+.hero-name {
+  font-size: 3.5rem; /* Adjust the size for the second h1 tag */
+  font-weight: bold;
+}
+.hero-buttons {
+  display: flex;
+  justify-content: center; /* Centers icons horizontally */
+  align-items: center; /* Centers icons vertically */
+  gap: 10px; /* Adds spacing between buttons */
+  margin: 20px 0; /* Optional margin for spacing */
+}
+
+.btn-icon {
+  border: 1px solid #00ff99;
+  color: #00ff99;
+  padding: 5px; /* Increase padding for better click area */
+  border-radius: 50%; /* Circular buttons */
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out; /* Smooth hover effect */
+  cursor: pointer;
+}
+
+.btn-icon:hover {
+  background-color: #00ff99; /* Add hover effect */
+  color: #000; /* Change icon color on hover */
+}
+
+.btn-download {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #00ff99;
+  color: #00ff99;
+  margin-right: 5px;
+  padding: 5px 10px;
+  border-radius: 30px;
+  background-color: transparent;
+  text-align: center;
+  overflow: hidden;
+  transition: color 0.3s ease-in-out;
+}
+
+.btn-download::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #00ff99;
+  z-index: 0;
+  transition: width 0.4s ease-in-out;
+  border-radius: 30px;
+}
+
+.btn-download:hover::before {
+  width: 100%; /* Expand to cover the button */
+}
+
+.btn-download:hover {
+  color: rgb(6, 5, 5) !important; /* Change text color to white */
+}
+
+.btn-download span {
+  position: relative; /* Ensures text stays above the background */
+  z-index: 1;
+}
+
+.hero-name{
+  color: #00ff99;
+}
+
+.s{
+  color: transparent; /* Make the fill color transparent */
+  -webkit-text-stroke: 2px #00ff99; /* Outline color and thickness */
+  padding-left: 0;
+  margin-left: 0
+}
+.numbers{
+  color: transparent; /* Make the fill color transparent */
+  -webkit-text-stroke: 2px #f9fdfc; /* Outline color and thickness */
+  padding-left: 0;
+  margin-left: 0
+}

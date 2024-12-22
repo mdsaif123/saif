@@ -1,0 +1,44 @@
+
+
+   .project-item {
+    /* background-color: #fff; */
+    /* border: 1px solid #ddd; */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+  }
+  
+  .project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-image {
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .project-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .project-description {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .project-item i {
+    color: #00ff99;
+    transition: color 0.3s;
+  }
+  
+  .project-item i:hover {
+    color: #0056b3;
+  }
+  
+  .btn {
+    font-size: 0.85rem;
+  }
+  

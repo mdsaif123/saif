@@ -1,0 +1,158 @@
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1rem 2rem; */
+    color: #fff;
+    position: relative;
+    z-index: 1000;
+    /* margin-top: 8px; */
+  }
+  
+  /* Logo styling */
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .logo span {
+    color: #00ff99;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  
+  .nav-links a:hover {
+    color: #00ff99;
+  }
+  
+  .hire-me {
+    background-color: #00ff99;
+    color: #111;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .hire-me:hover {
+    background-color: #00cc77;
+  }
+  
+  /* Mobile Menu Toggle */
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .hamburger::before {
+    transform: translateY(-8px);
+  }
+  
+  .hamburger::after {
+    transform: translateY(8px);
+  }
+  
+  /* Toggle State */
+  .hamburger.is-active {
+    background: transparent;
+  }
+  
+  .hamburger.is-active::before {
+    transform: rotate(45deg);
+  }
+  
+  .hamburger.is-active::after {
+    transform: rotate(-45deg);
+  }
+  /* Mobile Menu Toggle */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show toggle button on mobile */
+    cursor: pointer;
+    z-index: 1001; /* Ensure toggle button is on top */
+  }
+
+  .nav-links {
+    position: fixed; /* Fix position for full screen */
+    top: 0;
+    right: -100%; /* Start hidden off-screen */
+    width: 70%; /* Take up 70% of the screen width */
+    height: 100vh; /* Full viewport height */
+    background-color: #111; /* Dark background */
+    display: flex;
+    flex-direction: column; /* Align links in a column */
+    justify-content: center; /* Center links vertically */
+    align-items: center; /* Center links horizontally */
+    gap: 2rem; /* Space between links */
+    transition: right 0.3s ease-in-out; /* Smooth slide-in animation */
+    z-index: 1000; /* Ensure menu is above other content */
+  }
+
+  /* Show menu when active */
+  .nav-links.active {
+    right: 0; /* Slide in the menu */
+  }
+
+  /* Style for links */
+  .nav-links a {
+    font-size: 1.5rem; /* Make links larger for better readability */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  /* Hover effect */
+  .nav-links a:hover {
+    color: #00ff99;
+  }
+
+  /* Ensure Hire Me button stands out */
+  .hire-me {
+    background-color: #00ff99;
+    color: #111;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.2s;
+  }
+
+  .hire-me:hover {
+    background-color: #00cc77;
+  }
+}
