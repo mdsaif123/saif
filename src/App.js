@@ -1,31 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React from 'react';
+import { Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
-import HeroSection from './components/HeroSection/HeroSection';
+import Home from './pages/Home';
 import Services from './components/Services/Services';
-import Footer from './components/Footer/Footer';
 import Skills from './components/Skills/Skills';
-// import About from './components/About/About';
-import Projects from './components/Projects/Projects';
+import Projects from './components/Projects/Projects'; // Renamed for consistency
 import ContactPage from './components/Contact/ContactPage';
-// import Resume from './components/Resume/Resume';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-  <>
-  <Navbar/>
-  <HeroSection/>
-  {/* <About/> */}
-  <Services/>
-  <Skills/>
-  <Projects/>
-  <ContactPage/>
-
-
-  <Footer/>
-  {/* <Resume/> */}
-
-  </>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+      <Footer/>
+    </>
   );
 }
 

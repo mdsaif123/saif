@@ -5,6 +5,7 @@ import p1 from "../../assets/images/profile.png";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import MyResume from "../../assets/MdSaif.pdf"
 
 
 const useTypewriter = (text, speed = 50, delay = 2000) => {
@@ -60,7 +61,7 @@ const HeroSection = () => {
                   proficient in various programming languages and technologies.
                 </p>
                 <div className="hero-buttons d-flex justify-content-start">
-                <a href="/MdSaif.pdf" download="My_CV.pdf">
+                <a href={MyResume} download="My_CV.pdf">
   <button class="btn-download">
     <span>Download CV</span>
   </button>
@@ -77,7 +78,7 @@ const HeroSection = () => {
             <img style={{ width: "350px" }} src={p1} alt="" />
           </div>
         </div>
-        <div className="row text-white">
+        <div className="row text-white counter-section">
           {/* Column 1 */}
           <div className="col-md-3 col-6">
             <div className="d-flex  align-items-center">

@@ -27,6 +27,10 @@
     align-items: center;
     transition: transform 0.3s ease-in-out;
   }
+  .nav-links a.active {
+    color: #00ff99; /* Change to any color you prefer for the active state */
+    font-weight: bold; /* Make active links bold */
+  }
   
   .nav-links a {
     text-decoration: none;
@@ -42,7 +46,7 @@
   
   .hire-me {
     background-color: #00ff99;
-    color: #111;
+    color: #111 !important;
     border: none;
     padding: 0.5rem 1.2rem;
     border-radius: 25px;
