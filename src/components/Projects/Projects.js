@@ -3,6 +3,8 @@ import "./Project.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
+import Magnet from "../../CustomDesign/TextSlide/Magnet";
+import SpotlightCard from "../../CustomDesign/TextSlide/SpotlightCard";
 
 const Project = () => {
   useEffect(() => {
@@ -80,14 +82,15 @@ const Project = () => {
   return (
     <div className="container my-5 text-white">
       <div className="text-center mb-4">
-        <h1 data-aos="fade-up">My Projects</h1>
-        <p data-aos="fade-up">Check out some of the projects I've worked on!</p>
+        <h1 data-aos="fade-up " className="">My Projects</h1>
+        <p data-aos="fade-up">Take a look at some of the amazing projects I've had the chance to work on</p>
       </div>
 
       <div className="row">
         {projects.slice(0, showAllProjects ? projects.length : 3).map((project) => (
           <div className="col-md-4 mb-4" key={project.id} data-aos="fade-up">
-            <div className="project-item shadow-sm h-100 p-3 rounded">
+          <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
+          <div className="project-item shadow-sm h-100 p-3 rounded">
               <img
                 src={project.image}
                 alt={project.title}
@@ -124,14 +127,20 @@ const Project = () => {
                 </a>
               </div>
             </div>
+</SpotlightCard>
+           
           </div>
         ))}
       </div>
 
       <div className="text-center">
-        <button className="btn btn-outline-primary rounded-pill" onClick={toggleProjects}>
+       
+
+        <Magnet padding={50} disabled={false}>
+        <button className="showMoreBtn" onClick={toggleProjects}>
           {showAllProjects ? "Show Less" : "See More"}
         </button>
+</Magnet>
       </div>
     </div>
   );

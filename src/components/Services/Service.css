@@ -33,13 +33,7 @@
     z-index: 2; /* Ensure card is on top of the background */
   }
   
-  .card:hover {
-    transform: translateY(20px) scale(2); /* Lift and slightly scale the card */
-    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2); /* Add a deeper shadow */
-    border: 1px solid #00FF99; /* Highlight border on hover */
-    /* transform: translateY(-10px); Lift the card on hover */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  }
+
   
   /* Add top and bottom shining borders */
   .card::before,

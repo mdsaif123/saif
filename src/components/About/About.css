@@ -1,0 +1,84 @@
+
+.about-container{
+    /* height: 80vh; */
+  }
+  .image-container {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    /* width: 350px; */
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+ 
+  
+  .about-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .about-description {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .tab-button {
+    background-color: #292929;
+    color: #ccc;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .active-tab {
+    background-color: #00ff99;
+    color: #120a0a;
+  }
+  
+  .tab-content {
+    /* background-color: #292929; */
+    /* padding: 20px; */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #ccc;
+  }
+  .service-title {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding-bottom: 8px;
+    color: white;
+  }
+
+  .service-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    background-color: #00FF99;
+    transform: translateX(-50%);
+    border-radius: 10px;
+  }
+  @media screen and (max-width: 600px) {
+    .service-title {
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+  }
+  

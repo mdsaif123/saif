@@ -60,6 +60,7 @@ import { Button } from "@mui/material"; // Material UI Button
 import {FaReact} from "react-icons/fa";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
+import SpotlightCard from '../../CustomDesign/TextSlide/SpotlightCard';
 
 const Services = () => {
   useEffect(() => {
@@ -77,7 +78,8 @@ const Services = () => {
         </div>
         <div className="row">
         <div className="col-md-4 my-3">
-      <div className="card text-center" data-aos="fade-up">
+        <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
+        <div className="card text-center" data-aos="fade-up">
         <div className="card-body">
           {/* Icon at the top center */}
           <div>
@@ -100,9 +102,12 @@ const Services = () => {
           </Button>
         </div>
       </div>
+        </SpotlightCard>
+      
     </div>
     <div className="col-md-4 my-3">
-      <div className="card" data-aos="fade-up">
+    <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
+    <div className="card" data-aos="fade-up">
         <div className="card-body text-center">
           {/* Icons at the top center */}
           <div>
@@ -126,9 +131,12 @@ const Services = () => {
           </Button>
         </div>
       </div>
+</SpotlightCard>
+ 
     </div>
     <div className="col-md-4 my-3">
-      <div className="card" data-aos="fade-up">
+    <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
+    <div className="card" data-aos="fade-up">
         <div className="card-body text-center">
           {/* Icons at the top center */}
           <div>
@@ -151,6 +159,8 @@ const Services = () => {
           </Button>
         </div>
       </div>
+</SpotlightCard>
+     
     </div>
           {/* <div className="col-md-4 my-3">
             <div className="card">

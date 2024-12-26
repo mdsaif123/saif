@@ -7,6 +7,13 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import MyResume from "../../assets/MdSaif.pdf"
 
+// import Computer from "../Computers"
+// import { BlurText } from "./BlurText";
+import { BlurText } from "../../CustomDesign/TextSlide/BlurText";
+import { SplitText } from "../../CustomDesign/TextSlide/SplitText";
+import Magnet from "../../CustomDesign/TextSlide/Magnet";
+
+
 
 const useTypewriter = (text, speed = 50, delay = 2000) => {
   const [displayText, setDisplayText] = useState('');
@@ -51,7 +58,9 @@ const HeroSection = () => {
           <div className="col-md-6">
             <div className="container d-flex justify-content-between align-items-center mt-2">
               <div className="hero-text text-white">
-                <h3 className="hero-intro display-4">Hello I’m</h3>
+              <BlurText text="Hello I’m" className="hero-intro display-4" delay={50} />
+              {/* <SplitText text="Hello I’m" className="hero-intro display-4" delay={200} /> */}
+                {/* <h3 className="hero-intro display-4">Hello I’m</h3> */}
                 <h1 className="hero-name  display-2">
                   Md <span className="s">S</span>aif<i className="ri-sailboat-fill"></i>
                 </h1>
@@ -60,23 +69,36 @@ const HeroSection = () => {
                   I excel at crafting elegant digital experiences and I am
                   proficient in various programming languages and technologies.
                 </p>
+
                 <div className="hero-buttons d-flex justify-content-start">
+                
+                
                 <a href={MyResume} download="My_CV.pdf">
   <button class="btn-download">
     <span>Download CV</span>
   </button>
 </a>
 
-                  <button className=" btn-icon"><LinkedInIcon fontSize="small"/></button>
-                  <button className=" btn-icon"><GitHubIcon/></button>
-                  <button className=" btn-icon"><InstagramIcon/></button>
+<Magnet padding={20} disabled={false}>
+<button className=" btn-icon"><LinkedInIcon fontSize="small"/></button>
+</Magnet>
+<Magnet padding={20} disabled={false}>
+<button className=" btn-icon"><GitHubIcon/></button>
+</Magnet>
+<Magnet padding={20} disabled={false}>
+<button className=" btn-icon"><InstagramIcon/></button>
+</Magnet>
+                
+              
+                
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-md-6">
-            <img style={{ width: "350px" }} src={p1} alt="" />
-          </div>
+          <div className="col-md-6 d-none d-md-block">
+  <img style={{ width: "350px" }} src={p1} alt="" />
+</div>
+
         </div>
         <div className="row text-white counter-section">
           {/* Column 1 */}

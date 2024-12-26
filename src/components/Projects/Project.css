@@ -7,6 +7,18 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     
   }
+  .showMoreBtn{
+    border: 1px solid #00ff99;
+    background-color: transparent;
+    padding: 8px 25px;
+    border-radius: 30px;
+    color: #00ff99;
+  }
+  .project-title{
+    background: linear-gradient(120deg, #00ff9978, #fbfdff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   
   .project-item:hover {
     transform: translateY(-10px);

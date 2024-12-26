@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo1.png";
 import "./Navbar.css";
-
+import Magnet from "../../CustomDesign/TextSlide/Magnet";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // Track menu state
   const navRef = useRef(null);
@@ -78,6 +78,7 @@ const Navbar = () => {
           >
             Contact
           </NavLink>
+          <Magnet padding={50} disabled={false}>
           <button className="hire-me">
             <a
               style={{ color: "black" }}
@@ -88,6 +89,8 @@ const Navbar = () => {
               Hire me
             </a>
           </button>
+</Magnet>
+        
         </nav>
         <div className="menu-toggle" onClick={toggleMenu}>
           <div className={`hamburger ${isOpen ? "is-active" : ""}`}></div>
