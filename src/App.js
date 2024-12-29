@@ -26,7 +26,7 @@
 // }
 
 // export default App;
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Navbar from './components/Navbar/Navbar';
@@ -38,6 +38,28 @@ import ContactPage from './components/Contact/ContactPage';
 import Footer from './components/Footer/Footer';
 
 function App() {
+  
+  useEffect(() => {
+    const disableContextMenu = (e) => e.preventDefault();
+    document.addEventListener('contextmenu', disableContextMenu);
+    return () => document.removeEventListener('contextmenu', disableContextMenu);
+  }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      // Prevent common shortcuts
+      if (
+        e.key === 'PrintScreen' || 
+        (e.ctrlKey && (e.key === 'u' || e.key === 'Shift' || e.key === 'i' || e.key === 's'))
+      ) {
+        e.preventDefault();
+        alert('Screenshots are disabled on this site!');
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
+  
   return (
     <>
       <Helmet>

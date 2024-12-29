@@ -156,6 +156,16 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 import Magnet from "../../CustomDesign/TextSlide/Magnet";
 import SpotlightCard from "../../CustomDesign/TextSlide/SpotlightCard";
+import CodeIcon from '@mui/icons-material/Code';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+
+import NotesImg from "../../assets/images/project1.png"
+import Ecom from "../../assets/images/project2.png"
+import School from "../../assets/images/project3.png"
+import afiya from "../../assets/images/project4.png"
+import rabs from "../../assets/images/project5.png"
+import facebook from "../../assets/images/project6.png"
 
 const Project = () => {
   useEffect(() => {
@@ -169,7 +179,7 @@ const Project = () => {
   const projects = [
     {
       id: 1,
-      image: "https://mdsaif123.github.io/Saifu/notes.png", // Replace with your image path
+      image: NotesImg, // Replace with your image path
       title: "Notes App",
       description: "MERN stack project, featuring authentication and CRUD operations",
       technologies: ["fab fa-react", "fab fa-node", "fas fa-database"], // Font Awesome icons
@@ -178,7 +188,7 @@ const Project = () => {
     },
     {
       id: 2,
-      image: "https://mdsaif123.github.io/Saifu/mern-ecom.png",
+      image: Ecom,
       title: "E-Commerce",
       description: "MERN stack project. Users can log in, view products, Admin functionality includes",
       technologies: ["fab fa-react", "fab fa-node", "fas fa-database"], // Font Awesome icons
@@ -187,7 +197,7 @@ const Project = () => {
     },
     {
       id: 3,
-      image: "https://mdsaif123.github.io/Saifu/myschool.png",
+      image: School,
       title: "MYSCHOOL",
       description: "Built a React project for managing school details, including classes and courses",
       technologies: ["fab fa-react"],
@@ -196,7 +206,7 @@ const Project = () => {
     },
     {
       id: 4,
-      image: "https://mdsaif123.github.io/Saifu/aafiya.png",
+      image: afiya,
       title: "Aafiya Meditreats",
       description: "Developed a website with doctor and hospital details, for top doctors and hospitals",
       technologies: ["fab fa-html5", "fab fa-css3-alt", "fab fa-js"],
@@ -205,7 +215,7 @@ const Project = () => {
     },
     {
       id: 5,
-      image: "https://mdsaif123.github.io/Saifu/rabs.png",
+      image: rabs,
       title: "Landing Page",
       description: "Built a React project for a company landing page showing all the details about the company",
       technologies: ["fab fa-react"],
@@ -214,7 +224,7 @@ const Project = () => {
     },
     {
       id: 6,
-      image: "https://mdsaif123.github.io/Saifu/project3.png",
+      image: facebook,
       title: "Facebook Clone",
       description: "A weather app that fetches data from a weather API.",
       technologies: ["fab fa-html5", "fab fa-css3-alt", "fab fa-js"],
@@ -232,7 +242,7 @@ const Project = () => {
   return (
     <div className="container my-5 text-white">
       <div className="text-center mb-4">
-        <h1 data-aos="fade-up">My Projects</h1>
+        <h1 data-aos="fade-up">  <CodeIcon sx={{ fontSize: 50,color:"#00ff99" }} />  My Projects</h1>
         <p data-aos="fade-up">Take a look at some of the amazing projects I've had the chance to work on</p>
       </div>
 
@@ -289,9 +299,17 @@ const Project = () => {
 
       <div className="text-center">
         <Magnet padding={50} disabled={false}>
-          <button className="showMoreBtn" onClick={toggleProjects}>
-            {showAllProjects ? "Show Less" : "See More"}
-          </button>
+        <button className="showMoreBtn" onClick={toggleProjects}>
+  {showAllProjects ? (
+    <>
+      Show Less <ExpandLessIcon />
+    </>
+  ) : (
+    <>
+      See More <ExpandMoreIcon />
+    </>
+  )}
+</button>
         </Magnet>
       </div>
     </div>

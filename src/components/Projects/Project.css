@@ -8,11 +8,11 @@
     
   }
   .showMoreBtn{
-    border: 1px solid #00ff99;
+    border: 1px solid #6d7572;
     background-color: transparent;
     padding: 8px 25px;
     border-radius: 30px;
-    color: #00ff99;
+    color: #7b8983;
   }
   .project-title{
     background: linear-gradient(120deg, #00ff9978, #fbfdff);
@@ -29,6 +29,11 @@
     border-radius: 10px;
     height: 200px;
     object-fit: cover;
+
+
+
+
+
   }
   
   .project-title {

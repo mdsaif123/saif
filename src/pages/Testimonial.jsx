@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import TiltedScroll from "../components/feedback/TiltedScroll"
 import Testimonialform from "../components/feedback/Testimonialform";
+import RecommendIcon from '@mui/icons-material/Recommend';
 
 
 function Testimonial() {
@@ -8,7 +9,7 @@ function Testimonial() {
     <div className="app-container">
     
       <div className="container">
-      <h3 className="text-white text-center">Reviews & Feedback</h3>
+      <h3 className="text-white text-center"><RecommendIcon fontSize="large" sx={{color:"#00ff99"}}/>&nbsp;Reviews & Feedback</h3>
         <div className="row justify-content-between align-items-center">
           <div className="col-12 col-md-6 mb-0 mb-md-4 g-5">
             <TiltedScroll />

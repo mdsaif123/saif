@@ -1,3 +1,4 @@
+
 // import React, { useState } from "react";
 // import { Box, TextField, Rating, Typography } from "@mui/material";
 // import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
@@ -6,42 +7,38 @@
 // const Testimonialform = () => {
 //   const [rating, setRating] = useState(0);
 //   const [formSubmitted, setFormSubmitted] = useState(false);
-
+//   const [errorMessage, setErrorMessage] = useState("");
+//   const [result, setResult] = useState("");
+//   const [name, setName] = useState(""); // New state for name
 //   const handleSubmit = async (event) => {
 //     event.preventDefault();
+//     setResult("Sending...");
   
 //     const formData = new FormData(event.target);
-//     const testimonialData = {
-//       name: formData.get("name"),
-//       rating: rating,
-//       message: formData.get("message"),
-//     };
-  
-//     const web3FormEndpoint = "https://web3forms.com/submit/14d8288e-fa09-4922-a5d3-92970358eb2a"; // Full URL
-  
-//     const data = {
-//       name: testimonialData.name,
-//       rating: testimonialData.rating,
-//       message: testimonialData.message,
-//     };
+//     formData.append("access_key", "14d8288e-fa09-4922-a5d3-92970358eb2a"); // Use your Web3Forms API key
   
 //     try {
-//       const response = await fetch(web3FormEndpoint, {
+//       const response = await fetch("https://api.web3forms.com/submit", {
 //         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify(data),
+//         body: formData,
 //       });
   
-//       if (response.ok) {
-//         setFormSubmitted(true);
+//       const data = await response.json();
+  
+//       if (data.success) {
+//         setResult("Form Submitted Successfully");
+//         setFormSubmitted(true); // Update state to show success message
+//         setRating(0); // Reset the rating field
+//         // setName(""); // Clear the name field after submission
+//         console.log(name,"name")
+//         event.target.reset(); // Clear the form fields
 //       } else {
-//         const errorResponse = await response.text();
-//         console.error("Error response:", errorResponse);
+//         console.error("Error:", data);
+//         setErrorMessage(data.message || "Failed to submit.");
 //       }
 //     } catch (error) {
-//       console.error("Error submitting form:", error.message);
+//       console.error("Error sending form:", error);
+//       setErrorMessage("An error occurred. Please try again.");
 //     }
 //   };
   
@@ -52,8 +49,6 @@
 //         display: "flex",
 //         justifyContent: "center",
 //         alignItems: "center",
-//         // height: "100vh",
-//         // backgroundColor: "#1e1e1e",
 //         padding: "20px",
 //       }}
 //     >
@@ -71,7 +66,6 @@
 //           position: "relative",
 //         }}
 //       >
-//         {/* Carbon Design Circles */}
 //         <Box
 //           sx={{
 //             position: "absolute",
@@ -108,17 +102,6 @@
 //           ></Box>
 //         </Box>
 
-//         {/* <Typography
-//           variant="h6"
-//           gutterBottom
-//           sx={{
-//             color: "#ffffff",
-//             textAlign: "center",
-//             fontFamily: "monospace",
-//           }}
-//         >
-//           Leave a Testimonial
-//         </Typography> */}
 //         <Box
 //           component="form"
 //           onSubmit={handleSubmit}
@@ -129,12 +112,14 @@
 //           }}
 //         >
 //           <TextField
+//           className="mt-4"
 //             name="name"
 //             placeholder="Your Name"
 //             variant="standard"
 //             fullWidth
 //             required
-//             className="mt-4"
+//             value={name} // Bind the value to state
+//             onChange={(e) => setName(e.target.value)} // Update state on input change
 //             InputProps={{
 //               style: {
 //                 color: "#d4d4d4",
@@ -191,7 +176,6 @@
 //             }}
 //           />
 
-//           {/* Custom Button */}
 //           <button type="submit" className="feedback-btn">
 //             <div className="svg-wrapper-1">
 //               <div className="svg-wrapper">
@@ -214,11 +198,22 @@
 //         </Box>
 
 //         {formSubmitted && (
+//             <Typography
+//   variant="body1"
+//   sx={{ color: "#00ff99", textAlign: "center", marginTop: 2 }}
+// >
+//   {`Thank You `}
+//   <span style={{ color: "gold" }}>{name}</span>
+//   {` for your feedback`}
+// </Typography>
+
+//         )}
+//         {errorMessage && (
 //           <Typography
 //             variant="body1"
-//             sx={{ color: "#4caf50", textAlign: "center", marginTop: 2 }}
+//             sx={{ color: "#f44336", textAlign: "center", marginTop: 2 }}
 //           >
-//             Thank you for your feedback!
+//             {errorMessage}
 //           </Typography>
 //         )}
 //       </Box>
@@ -228,7 +223,7 @@
 
 // export default Testimonialform;
 import React, { useState } from "react";
-import { Box, TextField, Rating, Typography } from "@mui/material";
+import { Box, TextField, Rating, Typography, CircularProgress } from "@mui/material";
 import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
 import "./Testimonialform.css";
 
@@ -238,27 +233,27 @@ const Testimonialform = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [result, setResult] = useState("");
   const [name, setName] = useState(""); // New state for name
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending...");
-  
+    setResult("Sending..."); // Show the sending message
+
     const formData = new FormData(event.target);
     formData.append("access_key", "14d8288e-fa09-4922-a5d3-92970358eb2a"); // Use your Web3Forms API key
-  
+
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: formData,
       });
-  
+
       const data = await response.json();
-  
+
       if (data.success) {
         setResult("Form Submitted Successfully");
         setFormSubmitted(true); // Update state to show success message
         setRating(0); // Reset the rating field
         // setName(""); // Clear the name field after submission
-        console.log(name,"name")
         event.target.reset(); // Clear the form fields
       } else {
         console.error("Error:", data);
@@ -269,7 +264,6 @@ const Testimonialform = () => {
       setErrorMessage("An error occurred. Please try again.");
     }
   };
-  
 
   return (
     <Box
@@ -340,7 +334,7 @@ const Testimonialform = () => {
           }}
         >
           <TextField
-          className="mt-4"
+            className="mt-4"
             name="name"
             placeholder="Your Name"
             variant="standard"
@@ -425,17 +419,25 @@ const Testimonialform = () => {
           </button>
         </Box>
 
-        {formSubmitted && (
-            <Typography
-  variant="body1"
-  sx={{ color: "#00ff99", textAlign: "center", marginTop: 2 }}
->
-  {`Thank You `}
-  <span style={{ color: "gold" }}>{name}</span>
-  {` for your feedback`}
-</Typography>
+        {result === "Sending..." && (
+          <Box sx={{ display: "flex", justifyContent: "center", marginTop: 2 }}>
+          <CircularProgress sx={{color:"#00ff99"}} size={20} />
 
+            <Typography variant="body1" sx={{ color: "#00ff99", marginLeft: 2 }}>
+              Sending...
+            </Typography>
+          </Box>
         )}
+
+        {formSubmitted && (
+          <Typography
+            variant="body1"
+            sx={{ color: "#00ff99", textAlign: "center", marginTop: 2 }}
+          >
+            Thank You <span style={{ color: "gold" }}>{name}</span> for your feedback.
+          </Typography>
+        )}
+
         {errorMessage && (
           <Typography
             variant="body1"
