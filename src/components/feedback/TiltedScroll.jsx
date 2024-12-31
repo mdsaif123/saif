@@ -6,15 +6,15 @@ const TiltedScroll = () => {
   const items = [
     {
       id: "1",
-      name: "John Doe",
-      description: "Great product, would recommend!",
+      name: "MOHAMMED ARFAN",
+      description: "It has been a great pleasure to work with such a wonderful colleague who has consistently helped me with various aspects of my work. Their support and collaboration have been invaluable",
       rating: 5,
     },
     {
       id: "2",
-      name: "Jane Smith",
-      description: "Good value for the price.",
-      rating: 4,
+      name: "Aftab.S",
+      description: "Your website design is very unique.I like it very much! 😊",
+      rating: 5,
     },
     {
       id: "3",

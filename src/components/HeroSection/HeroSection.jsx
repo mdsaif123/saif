@@ -131,7 +131,7 @@ const HeroSection = () => {
           <div className="col-md-3 col-6">
             <div className="d-flex  align-items-center">
               <h1 className="display-3 fw-bold me-2 numbers">
-                <CountUp start={0} end={8} duration={3} />
+                <CountUp start={0} end={12} duration={3} />
               </h1>
               <div className="text-start">
                 <p className="mb-0">Technologies</p>
@@ -144,7 +144,7 @@ const HeroSection = () => {
           <div className="col-md-3 col-6">
             <div className="d-flex align-items-center">
               <h1 className="display-3 fw-bold me-2 numbers">
-                <CountUp start={0} end={50} duration={3} />
+                <CountUp start={0} end={32} duration={3} />
               </h1>
               <div className="text-start">
                 <p className="mb-0">Code</p>
