@@ -36,6 +36,7 @@ import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
 import ContactPage from './components/Contact/ContactPage';
 import Footer from './components/Footer/Footer';
+import TestimonialSlider from './components/Testimonial/TestimonialSlider';
 
 function App() {
   
@@ -104,6 +105,7 @@ function App() {
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/testimonial" element={<TestimonialSlider/>} />
       </Routes>
       <Footer />
     </>

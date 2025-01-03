@@ -23,7 +23,7 @@
     height: 250px;
     width: 300px;
     animation: skew-scroll 20s linear infinite;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr; /* Single column for vertical scrolling */
     gap: 1.25rem; /* gap-5 equivalent */
   }
   

@@ -1,0 +1,162 @@
+/* Main container */
+.testimonial-slider {
+  padding: 2rem 0;
+  position: relative;
+}
+
+/* Title */
+.testimonial-slider .testimonial-slider__title {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 2.5rem;
+  font-family: "Urbanist", sans-serif !important;
+}
+
+/* Slide */
+.testimonial-slider .testimonial-slider__slide {
+  padding: 0 1rem;
+}
+
+/* Card */
+.testimonial-slider .testimonial-slider__card {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for contrast */
+  border-radius: 12px;
+  font-family: "Urbanist", sans-serif !important;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+}
+
+
+
+
+
+/* Card content */
+.testimonial-slider .testimonial-slider__content {
+  padding: 1.5rem;
+  font-family: "Urbanist", sans-serif !important;
+}
+
+/* Rating */
+.testimonial-slider .testimonial-slider__rating {
+  margin-bottom: 1rem;
+}
+
+/* Review text */
+.testimonial-slider .testimonial-slider__review {
+  margin-bottom: 1.5rem;
+  min-height: 120px;
+  line-height: 1.6;
+  color: #1a1a1a;
+  font-family: "Urbanist", sans-serif !important;
+}
+
+/* Profile section */
+.testimonial-slider .testimonial-slider__profile {
+  display: flex;
+  align-items: center;
+}
+
+/* Avatar */
+.testimonial-slider .testimonial-slider__avatar {
+  width: 48px !important;
+  height: 48px !important;
+  margin-right: 1rem;
+  border: 1px solid rgba(31, 238, 48, 0.2); /* Light border for contrast */
+ 
+}
+
+/* User info container */
+.testimonial-slider .testimonial-slider__user-info {
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* User name */
+.testimonial-slider .testimonial-slider__name {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  font-family: "Urbanist", sans-serif !important;
+  color: #1a1a1a;
+}
+
+/* User location */
+.testimonial-slider .testimonial-slider__location {
+  font-family: "Urbanist", sans-serif !important;
+  color: #6b7280;
+}
+
+/* Navigation arrows */
+.testimonial-slider .testimonial-slider__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #f8fafc !important;
+  z-index: 1;
+}
+
+.testimonial-slider .testimonial-slider__arrow:hover {
+  background-color: #e2e8f0 !important;
+}
+
+.testimonial-slider .testimonial-slider__arrow--prev {
+  left: -50px;
+}
+
+.testimonial-slider .testimonial-slider__arrow--next {
+  right: -50px;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .testimonial-slider .testimonial-slider__arrow--prev {
+    left: -30px;
+  }
+
+  .testimonial-slider .testimonial-slider__arrow--next {
+    right: -30px;
+  }
+
+  .testimonial-slider .testimonial-slider__title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-slider .testimonial-slider__arrow {
+    display: none !important;
+  }
+
+  .testimonial-slider .testimonial-slider__review {
+    min-height: auto;
+  }
+
+  .testimonial-slider .testimonial-slider__slide {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Slick slider overrides */
+.testimonial-slider .slick-list {
+  margin: 0 -1rem;
+}
+
+.testimonial-slider .slick-slide {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.testimonial-slider .slick-slide.slick-active {
+  opacity: 1;
+}
+
+.testimonial-slider .slick-track {
+  display: flex !important;
+}
+
+.testimonial-slider .slick-slide > div {
+  height: 100%;
+}
