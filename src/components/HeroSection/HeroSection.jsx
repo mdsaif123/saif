@@ -80,10 +80,12 @@ const HeroSection = () => {
 </a>
 
 <Magnet padding={20} disabled={false}>
-<button className=" btn-icon"><LinkedInIcon fontSize="small"/></button>
+<a href="https://www.linkedin.com/in/md-saif-linkdin17/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+<button className=" btn-icon"><LinkedInIcon fontSize="small"/></button></a>
 </Magnet>
 <Magnet padding={20} disabled={false}>
-<button className=" btn-icon"><GitHubIcon/></button>
+<a href="https://github.com/mdsaif123">
+<button className=" btn-icon"><GitHubIcon/></button></a>
 </Magnet>
 <Magnet padding={20} disabled={false}>
 <button className=" btn-icon"><InstagramIcon/></button>

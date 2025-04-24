@@ -166,6 +166,8 @@ import School from "../../assets/images/project3.png"
 import afiya from "../../assets/images/project4.png"
 import rabs from "../../assets/images/project5.png"
 import facebook from "../../assets/images/project6.png"
+import Aspect from "../../assets/images/Aspect.png"
+import Humandhood from "../../assets/images/Humanhood.png"
 
 const Project = () => {
   useEffect(() => {
@@ -177,23 +179,17 @@ const Project = () => {
   }, []);
 
   const projects = [
-    {
-      id: 1,
-      image: NotesImg, // Replace with your image path
-      title: "Notes App",
-      description: "MERN stack project, featuring authentication and CRUD operations",
-      technologies: ["fab fa-react", "fab fa-node", "fas fa-database"], // Font Awesome icons
-      liveDemo: "https://prismatic-trifle-cbeeb9.netlify.app/",
-      sourceCode: "https://github.com/mdsaif123/Notes",
-    },
+  
     {
       id: 2,
       image: Ecom,
       title: "E-Commerce",
       description: "MERN stack project. Users can log in, view products, Admin functionality includes",
       technologies: ["fab fa-react", "fab fa-node", "fas fa-database"], // Font Awesome icons
-      liveDemo: "https://rad-klepon-186679.netlify.app/",
-      sourceCode: "https://github.com/mdsaif123/Mern-Ecommerce-app",
+      // liveDemo: "https://rad-klepon-186679.netlify.app/",
+        liveDemo: "https://mdsaif123.github.io/Fashion-store-Ecommerce-/",
+      // sourceCode: "https://github.com/mdsaif123/Mern-Ecommerce-app",
+      sourceCode: "https://github.com/mdsaif123/Fashion-store-Ecommerce-",
     },
     {
       id: 3,
@@ -205,15 +201,6 @@ const Project = () => {
       sourceCode: "https://github.com/mdsaif123/Myschool",
     },
     {
-      id: 4,
-      image: afiya,
-      title: "Aafiya Meditreats",
-      description: "Developed a website with doctor and hospital details, for top doctors and hospitals",
-      technologies: ["fab fa-html5", "fab fa-css3-alt", "fab fa-js"],
-      liveDemo: "https://comforting-liger-ed6845.netlify.app/",
-      sourceCode: "https://github.com/mdsaif123/Aafiya-Mediretreats",
-    },
-    {
       id: 5,
       image: rabs,
       title: "Landing Page",
@@ -223,6 +210,25 @@ const Project = () => {
       sourceCode: "https://github.com/mdsaif123/Rabs-assignment-react",
     },
     {
+      id: 1,
+      image: NotesImg, // Replace with your image path
+      title: "Notes App",
+      description: "MERN stack project, featuring authentication and CRUD operations",
+      technologies: ["fab fa-react", "fab fa-node", "fas fa-database"], // Font Awesome icons
+      liveDemo: "https://prismatic-trifle-cbeeb9.netlify.app/",
+      sourceCode: "https://github.com/mdsaif123/Notes",
+    },
+    {
+      id: 4,
+      image: afiya,
+      title: "Aafiya Meditreats",
+      description: "Developed a website with doctor and hospital details, for top doctors and hospitals",
+      technologies: ["fab fa-html5", "fab fa-css3-alt", "fab fa-js"],
+      liveDemo: "https://comforting-liger-ed6845.netlify.app/",
+      sourceCode: "https://github.com/mdsaif123/Aafiya-Mediretreats",
+    },
+  
+    {
       id: 6,
       image: facebook,
       title: "Facebook Clone",
@@ -230,6 +236,24 @@ const Project = () => {
       technologies: ["fab fa-html5", "fab fa-css3-alt", "fab fa-js"],
       liveDemo: "https://mdsaif123.github.io/Facebook_Clone_new/",
       sourceCode: "https://github.com/mdsaif123/Facebook-clone",
+    },
+    {
+      id: 7,
+      image:Humandhood,
+      title: "Human Hood",
+      description: "This website developed to learn the layout and resposiveness puprpose ",
+      technologies: ["fab fa-html5", "fab fa-css3-alt", "fab fa-js"],
+      liveDemo: "https://mdsaif123.github.io/Human-Hood/",
+      sourceCode: "https://github.com/mdsaif123/Human-Hood",
+    },
+    {
+      id: 8,
+      image: Aspect,
+      title: "Aspect Website",
+      description: "This website developed to learn the layout and resposiveness puprpose ",
+      technologies: ["fab fa-html5", "fab fa-css3-alt", "fab fa-js"],
+      liveDemo: "https://mdsaif123.github.io/Aspect-New-1/",
+      sourceCode: "https://github.com/mdsaif123/Aspect-New-1",
     },
   ];
 
