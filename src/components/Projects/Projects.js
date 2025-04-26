@@ -194,7 +194,7 @@ const Project = () => {
     {
       id: 3,
       image: School,
-      title: "MYSCHOOL",
+      title: "EDUCITY",
       description: "Built a React project for managing school details, including classes and courses",
       technologies: ["fab fa-react"],
       liveDemo: "https://ornate-gumdrop-0b313a.netlify.app/",
@@ -208,6 +208,24 @@ const Project = () => {
       technologies: ["fab fa-react"],
       liveDemo: "https://friendly-crostata-6748a8.netlify.app/",
       sourceCode: "https://github.com/mdsaif123/Rabs-assignment-react",
+    },
+    {
+      id: 7,
+      image:Humandhood,
+      title: "Human Hood",
+      description: "This website developed to learn the layout and resposiveness puprpose ",
+      technologies: ["fab fa-html5", "fab fa-css3-alt", "fab fa-js"],
+      liveDemo: "https://mdsaif123.github.io/Human-Hood/",
+      sourceCode: "https://github.com/mdsaif123/Human-Hood",
+    },
+    {
+      id: 8,
+      image: Aspect,
+      title: "Aspect Website",
+      description: "This website developed to learn the layout and resposiveness puprpose ",
+      technologies: ["fab fa-html5", "fab fa-css3-alt", "fab fa-js"],
+      liveDemo: "https://mdsaif123.github.io/Aspect-New-1/",
+      sourceCode: "https://github.com/mdsaif123/Aspect-New-1",
     },
     {
       id: 1,
@@ -237,24 +255,8 @@ const Project = () => {
       liveDemo: "https://mdsaif123.github.io/Facebook_Clone_new/",
       sourceCode: "https://github.com/mdsaif123/Facebook-clone",
     },
-    {
-      id: 7,
-      image:Humandhood,
-      title: "Human Hood",
-      description: "This website developed to learn the layout and resposiveness puprpose ",
-      technologies: ["fab fa-html5", "fab fa-css3-alt", "fab fa-js"],
-      liveDemo: "https://mdsaif123.github.io/Human-Hood/",
-      sourceCode: "https://github.com/mdsaif123/Human-Hood",
-    },
-    {
-      id: 8,
-      image: Aspect,
-      title: "Aspect Website",
-      description: "This website developed to learn the layout and resposiveness puprpose ",
-      technologies: ["fab fa-html5", "fab fa-css3-alt", "fab fa-js"],
-      liveDemo: "https://mdsaif123.github.io/Aspect-New-1/",
-      sourceCode: "https://github.com/mdsaif123/Aspect-New-1",
-    },
+  
+   
   ];
 
   const [showAllProjects, setShowAllProjects] = useState(false);
